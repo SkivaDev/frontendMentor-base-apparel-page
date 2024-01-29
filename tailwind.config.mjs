@@ -2,7 +2,18 @@
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			backgroundColor: {
+				'desaturated-red': 'hsl(0, 36%, 70%)',
+				'soft-red': 'hsl(0, 93%, 68%)',
+				'dark-grayish-red': 'hsl(0, 6%, 24%)',
+			},
+			colors: {
+				'desaturated-red': 'hsl(0, 36%, 70%)',
+				'soft-red': 'hsl(0, 93%, 68%)',
+				'dark-grayish-red': 'hsl(0, 6%, 24%)'
+			}
+		},
 	},
 	plugins: [],
 }
