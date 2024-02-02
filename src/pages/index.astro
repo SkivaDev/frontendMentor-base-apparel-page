@@ -1,5 +1,5 @@
 ---
-
+import "../styles/globals.css";
 ---
 
 <html lang="en">
@@ -11,21 +11,28 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<main class="grid">
-			<section>
-				<div></div>
+		<main class="grid grid-cols-[57.5%,1fr] w-full h-screen">
+			<section class="py-16 px-[164px]">
 				<div>
-					<h1></h1>
-					<p></p>
-					<div>
-						<input type="text">
-						<span></span>
-						<button type="button"></button>
+					<img src="./images/logo.svg" alt="logo">
+				</div>
+				<div class="mt-28">
+					<h1 class="text-[64px] uppercase"><span class="text-desaturated-red font-light">We're</span> coming soon</h1>
+					<p class="text-desaturated-red">Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.</p>
+					<div class="flex justify-between border-2 border-desaturated-red rounded-full pl-6">
+						<input type="text" placeholder="Email Address" class="w-full">
+						<button type="button" class="bg-soft-red px-11 py-3 rounded-full ">
+							<img src="./images/icon-arrow.svg" alt="arrow">
+						</button>
 					</div>
 				</div>
 			</section>
-			<section>
-				<img src="" alt="">
+			<section class="w-full h-full">
+				<picture>
+					<source media="(width <= 768)" srcset="./images/hero-mobile.jpg" />
+					<img src="./images/hero-desktop.jpg" alt="hero image" class="w-full h-full object-center object-position-center"/>
+				</picture>
 			</section>
 		</main>
 	</body>
