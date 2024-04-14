@@ -11,43 +11,42 @@ import "../styles/globals.css";
     <title>Astro</title>
   </head>
   <body>
-    <main class="grid grid-cols-[57.6%,1fr] w-full h-screen">
+    <main class="grid grid-area grid-cols-1 grid-rows-[10.5%,31.2%,1fr] md:grid-cols-[57.6%,1fr] md:grid-rows-1 w-full h-screen">
       <section
-        class="py-16 px-[164px] pl-[165px] bg-pattern bg-cover bg-center"
+        class="text-section flex justify-center md:block static md:relative py-16 px-[30px] md:px-[100px] lg:px-[164px] lg:pl-[165px] bg-pattern bg-cover bg-center"
       >
-        <div>
+        <div class="logo absolute md:static top-[4%] left-[9%] max-w-[100px] md:max-w-full">
           <img src="./images/logo.svg" alt="logo" />
         </div>
-        <div class="mt-[138px] max-w-[445px] flex flex-col">
-          <h1 class="text-[64px] uppercase tracking-[17px] leading-[67px] font-semibold">
-            <span class="text-desaturated-red font-light">We're</span> coming soon
+        <div class="md:mt-[90px] lg:mt-[138px] max-w-[445px] flex flex-col text-center md:text-left">
+          <h1 class="text-[39px] md:text-[55px] lg:text-[64px] uppercase tracking-[12px] md:tracking-[17px] leading-[42px] md:leading-[67px] font-semibold">
+            <span class="text-desaturated-red font-light">We're</span><br> coming soon
           </h1>
-          <p class="text-desaturated-red text-lg mt-[22px] tracking-[-0.8px]">
+          <p class="text-desaturated-red text-[16px] md:text-lg mt-[16px] md:mt-[22px] tracking-[-0.8px] leading-[22px] md:leading-[1.75rem]">
             Hello fellow shoppers! We're currently building our new fashion
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </p>
           <div
-            class="flex justify-between border border-desaturated-red rounded-full pl-[31px] h-14 bg-white mt-[40px]"
+            class="flex justify-between border border-desaturated-red rounded-full pl-[25px] md:pl-[31px] h-[48px] md:h-14 bg-white mt-[32px] md:mt-[40px]"
           >
             <input type="text" placeholder="Email Address" class="w-full outline-0" />
             <button
               type="button"
-              class="bg-soft-red w-[130px] h-full flex justify-center items-center rounded-full shadow-button-shadow bg-[linear-gradient(135deg,hsl(0,80%,86%),hsl(0,74%,74%))]"
+              class="bg-soft-red w-[84px] md:w-[130px] h-full flex justify-center items-center rounded-full shadow-button-shadow bg-[linear-gradient(135deg,hsl(0,80%,86%),hsl(0,74%,74%))]"
             >
               <img src="./images/icon-arrow.svg" alt="arrow" class="" />
             </button>
           </div>
         </div>
       </section>
-      <section class="w-full h-full overflow-hidden">
+      <section class="image-section w-full h-full overflow-hidden">
         <picture>
-          <source media="(width <= 768)" srcset="./images/hero-mobile.jpg" />
-          <!-- <img src="./images/hero-desktop.jpg" alt="hero image" class="w-full h-max object-center object-position-center"/> -->
+          <source media="(min-width:768px)" srcset="./images/hero-desktop.jpg" />
           <img
-            src="./images/hero-desktop.jpg"
+            src="./images/hero-mobile.jpg"
             alt="hero image"
-            class="w-full"
+            class="w-full h-full object-cover object-top md:object-center"
           />
         </picture>
       </section>
